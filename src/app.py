@@ -40,4 +40,24 @@ app.layout = dbc.Container([
                 style={'border-width': '0', 'width': '100%', 'height': '400px'})])])])
 
 
+# Set up callbacks/backend
+@app.callback(
+    Output('boxplot', 'srcDoc'),
+    Input('year1', 'value'),
+    Input('year2', 'value')
+    )
+def plot_altair(year1, year2):
+
+    mo
+
+    scatter = alt.Chart(movies).mark_point().encode(
+        x=alt.X(xcol, scale=alt.Scale(domain=[x_min, x_max])),
+        y=alt.Y(ycol, scale=alt.Scale(domain=[y_min, y_max])),
+        tooltip=['Series_Title','Genre','Released_Year', 'Runtime','IMDB_Rating'])
+    scatter = scatter.properties(title = 'Scatter Plot of ' + xcol + ' and ' + ycol)
+    output = scatter + text + scatter.transform_regression(xcol,ycol).mark_line(color = 'red')
+    return output.to_html()
+
+if __name__ == '__main__':
+    app.run_server(debug=True)
 
