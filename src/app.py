@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np 
 
 # Data Wrangling
-movies = pd.read_csv("data/imdb_top_1000.csv", dtype={'Runtime': str})
+movies = pd.read_csv("../data/imdb_top_1000.csv", dtype={'Runtime': str})
 movies['Runtime'] = movies['Runtime'].str.extract('(\d+)').astype(int)
 movies = movies.loc[:,['Director', 'Released_Year', 'IMDB_Rating']]
 movies['Released_Year'] =movies['Released_Year'].str.extract('(\d+)')
