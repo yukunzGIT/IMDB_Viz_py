@@ -1,4 +1,4 @@
-# IMDB_viz_python
+# IMDB_Viz_py
 
 Welcome everyone and thank you for visiting the `IMDB_Viz_py` project repository!
 
