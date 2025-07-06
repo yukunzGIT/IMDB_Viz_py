@@ -58,4 +58,4 @@ For the dashboard, we're sourcing the data from Kaggle, which is a well-known pl
 
 ## License
 
-`IMDB_Viz_py` was created by Yukun Edward Zhang. It is licensed under the terms of the MIT license.
+`IMDB_Viz_py` was created by Yukun Zhang. It is licensed under the terms of the MIT license.
